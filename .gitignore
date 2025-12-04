@@ -1,0 +1,12 @@
+# VSCode
+.vscode/
+
+# Dependencias
+node_modules/
+
+# Archivos temporales
+dist/
+.DS_Store
+
+# Configuración privada
+.env
