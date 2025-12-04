@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Proyecto Bootstrap</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyecto Bootstrap</title>
 
-  <!-- 
+    <!-- 
     🟦 BOOTSTRAP CSS
     Importamos Bootstrap desde un CDN (más rápido y fácil que instalarlo).
     Incluye:
@@ -13,50 +13,54 @@
       - Componentes (navbar, cards, modals, alerts, etc.)
       - Utilidades listas (padding, margin, colores, textos)
   -->
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-  >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- 
+    <!-- 
     🟩 CSS PERSONALIZADO
     Aquí pondrás tus propios estilos, que se aplican DESPUÉS de Bootstrap.
     Es donde puedes modificar colores, tipografías, ajustes, etc.
   -->
-  <link rel="stylesheet" href="css/estilos.css">
-</head>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
 
-<body>
-
-  <!-- 
+  <body>
+    <!-- 
     🟥 NAVBAR (Barra de navegación)
     - navbar-expand-lg → se expande en pantallas grandes, se colapsa en móvil
     - navbar-dark + bg-dark → colores predefinidos de Bootstrap
     - container → centra el contenido
   -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Mi Proyecto BS5</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Mi Proyecto BS5</a>
 
-      <!-- Botón hamburguesa para móvil -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <!-- Menú colapsable -->
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <!-- ms-auto → empuja los elementos a la derecha -->
-          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-        </ul>
+        <!-- Botón hamburguesa para móvil -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú colapsable -->
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <!-- ms-auto → empuja los elementos a la derecha -->
+            <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- 
+    <!-- 
     🟦 HEADER PRINCIPAL
     - bg-primary → fondo azul
     - text-white → texto blanco
@@ -65,49 +69,115 @@
     - display-4 → título grande estilo Bootstrap
     - lead → texto un poco más grande y suave
   -->
-  <header class="bg-primary text-white text-center py-5">
-    <h1 class="display-4">Bienvenido a Bootstrap</h1>
-    <p class="lead">Aprendiendo el sistema de grid y componentes</p>
-  </header>
+    <header class="bg-primary text-white text-center py-5">
+      <h1 class="display-4">Bienvenido a Bootstrap</h1>
+      <p class="lead">Aprendiendo el sistema de grid y componentes</p>
+    </header>
 
-  <!-- 
+    <!-- 
     🟨 CONTENIDO PRINCIPAL
     container → fija el ancho y centra el contenido
     my-5 → margen vertical grande 
   -->
-  <main class="container my-5">
+    <main class="container my-5">
+      <h2 class="mb-4">Primera sección con el Grid</h2>
 
-    <h2 class="mb-4">Primera sección con el Grid</h2>
-
-    <!-- 
+      <!-- 
       🟩 FILA DEL GRID (Sistema de 12 columnas)
       Cada fila tiene 12 columnas imaginarias.
       col-md-4 → en pantallas medianas ocupa 4 columnas (4 + 4 + 4 = 12)
       col-sm-12 → en móviles ocupa 12 columnas (una debajo de otra)
       col-sm-6 → para tablets, 2 columnas por fila
     -->
-    <div class="row">
+      <div class="row">
+        <!-- Columna 1 -->
+        <div class="col-md-4 col-sm-12 bg-light p-3 border">Columna 1</div>
 
-      <!-- Columna 1 -->
-      <div class="col-md-4 col-sm-12 bg-light p-3 border">
-        Columna 1
+        <!-- Columna 2 -->
+        <div class="col-md-4 col-sm-6 bg-secondary text-white p-3">
+          Columna 2
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="col-md-4 col-sm-6 bg-light p-3 border">Columna 3</div>
       </div>
 
-      <!-- Columna 2 -->
-      <div class="col-md-4 col-sm-6 bg-secondary text-white p-3">
-        Columna 2
+      <hr class="my-5" />
+      <!-- Línea divisoria opcional -->
+      <h2 class="mb-4 text-center">Galería de Proyectos</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="img/foto1.jpg" class="card-img-top" alt="Imagen 1" />
+
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 1</h5>
+              <p class="card-text">Texto descriptivo del proyecto.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="img/foto2.jpg" class="card-img-top" alt="Imagen 2" />
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 2</h5>
+              <p class="card-text">Texto descriptivo del proyecto.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="img/foto3.jpg" class="card-img-top" alt="Imagen 3" />
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 3</h5>
+              <p class="card-text">Texto descriptivo del proyecto.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="img/foto4.jpg" class="card-img-top" alt="Imagen 4" />
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 4</h5>
+              <p class="card-text">Texto descriptivo del proyecto.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="img/foto5.jpg" class="card-img-top" alt="Imagen 5" />
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 3</h5>
+              <p class="card-text">Texto descriptivo del proyecto.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="img/foto6.jpg" class="card-img-top" alt="Imagen 6" />
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 3</h5>
+              <p class="card-text">Texto descriptivo del proyecto.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>  
       </div>
+      <!-- row -->
+    </main>
 
-      <!-- Columna 3 -->
-      <div class="col-md-4 col-sm-6 bg-light p-3 border">
-        Columna 3
-      </div>
-
-    </div>
-
-  </main>
-
-  <!-- 
+    <!-- 
     🟦 BOOTSTRAP JS
     Necesario para que funcionen:
       - Navbar colapsable
@@ -116,15 +186,12 @@
       - Carousels
     Se carga al final para mejor rendimiento.
   -->
-  <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- 
+    <!-- 
     🟩 JS PERSONALIZADO
     Aquí pondrás funciones tuyas.
   -->
-  <script src="js/script.js"></script>
-
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
