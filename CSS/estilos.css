@@ -3,3 +3,51 @@
   object-fit: cover;   /* Recorta la imagen manteniendo proporción */
   width: 100%;         /* Asegura que ocupe todo el ancho */
 }
+
+/* Overlay oscuro */
+.overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+/* Asegurar que el caption quede arriba del overlay */
+.carousel-caption {
+  z-index: 2;
+}
+
+/* Imágenes del carousel uniformes */
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* ALTURA BASE PARA PANTALLAS GRANDES */
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* PANTALLAS MEDIANAS (LAPTOPS, TABLETS HORIZONTALES) */
+@media (max-height: 850px) {
+  .carousel-item img {
+    height: 450px;
+  }
+}
+
+/* PANTALLAS MÁS BAJAS */
+@media (max-height: 700px) {
+  .carousel-item img {
+    height: 350px;
+  }
+}
+
+/* PANTALLAS PEQUEÑAS (MÓVIL HORIZONTAL, TABLET VERTICAL) */
+@media (max-height: 550px) {
+  .carousel-item img {
+    height: 250px;
+  }
+}
