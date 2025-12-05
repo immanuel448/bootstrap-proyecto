@@ -1,0 +1,5 @@
+.card-img-top {
+  height: 300px;       /* Ajusta la altura que quieras */
+  object-fit: cover;   /* Recorta la imagen manteniendo proporción */
+  width: 100%;         /* Asegura que ocupe todo el ancho */
+}
