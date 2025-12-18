@@ -18,12 +18,6 @@
 }
 
 /* Imágenes del carousel uniformes */
-.carousel-item img {
-  height: 600px;
-  object-fit: cover;
-  width: 100%;
-}
-
 /* ALTURA BASE PARA PANTALLAS GRANDES */
 .carousel-item img {
   height: 600px;
