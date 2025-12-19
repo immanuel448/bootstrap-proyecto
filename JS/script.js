@@ -10,27 +10,19 @@
   // Convierte la lista de formularios en un array y recorre cada uno
   Array.from(forms).forEach((form) => {
     // Escucha el evento submit (cuando el usuario intenta enviar el formulario)
-    form.addEventListener(
-      "submit",
-      (event) => {
-        // checkValidity() es validación HTML5 nativa
-        // Retorna false si algún campo required, email, etc. es inválido
-        if (!form.checkValidity()) {
-          // Evita que el formulario se envíe
-          event.preventDefault();
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
 
-          // Evita que el evento siga propagándose
-          event.stopPropagation();
-        }
+      if (!form.checkValidity()) {
+        event.stopPropagation();
+      } else {
+        alert("Mensaje enviado correctamente ✔️");
+        form.reset();
+        form.classList.remove("was-validated");
+        return;
+      }
 
-        // Agrega la clase "was-validated"
-        // Bootstrap usa esta clase para mostrar:
-        // - Bordes verdes (válido)
-        // - Bordes rojos (inválido)
-        // - Mensajes feedback
-        form.classList.add("was-validated");
-      },
-      false
-    );
+      form.classList.add("was-validated");
+    });
   });
 })();

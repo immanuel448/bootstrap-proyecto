@@ -29,6 +29,11 @@ html {
   width: 100%;
 }
 
+section[id],
+header[id] {
+  scroll-margin-top: 80px; /* altura aproximada del navbar */
+}
+
 section .border {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
