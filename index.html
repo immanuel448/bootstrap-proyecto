@@ -35,7 +35,7 @@
     - navbar-dark + bg-dark → colores predefinidos de Bootstrap
     - container → centra el contenido
   -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">Mi Proyecto BS5</a>
 
@@ -53,10 +53,18 @@
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto">
             <!-- ms-auto → empuja los elementos a la derecha -->
-            <li class="nav-item"><a class="nav-link" href="#inicio  ">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio  ">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#galeria">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -191,9 +199,8 @@
       <!-- ========================= -->
       <!--     SECCIÓN SERVICIOS     -->
       <!-- ========================= -->
-
-      <section class="my-5">
-        <h2 id="servicios" class="text-center mb-5">Servicios</h2>
+      <section id="servicios" class="my-5">
+        <h2 class="text-center mb-5">Servicios</h2>
 
         <div class="row g-4">
           <!-- SERVICIO 1 -->
@@ -234,8 +241,8 @@
       <!-- ========================= -->
       <!--          CARDS            -->
       <!-- ========================= -->
-
-      <h2 id = "galeria" class="mb-4 text-center">Galería de Proyectos</h2>
+       <section id="galeria" class="my-5">
+                <h2 class="mb-4 text-center">Galería de Proyectos</h2>
 
       <div class="row g-4">
         <div class="col-md-4 col-sm-6">
@@ -306,12 +313,13 @@
         </div>
       </div>
       <!-- row -->
+       </section>
 
       <!-- ========================= -->
       <!--         CONTACTO          -->
       <!-- ========================= -->
-      <section class="container my-5">
-        <h2 id="contacto" class="mb-4 text-center">Contacto</h2>
+      <section id="contacto" class="container my-5">
+        <h2 class="mb-4 text-center">Contacto</h2>
 
         <div class="row justify-content-center">
           <div class="col-md-6">
