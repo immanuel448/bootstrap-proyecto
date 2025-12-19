@@ -328,13 +328,14 @@
               Todos los campos son obligatorios
             </div>
 
-            <form>
+            <form class="needs-validation" novalidate>
               <div class="mb-3">
                 <label class="form-label">Nombre</label>
                 <input
                   type="text"
-                  class="form-control is-invalid"
+                  class="form-control"
                   placeholder="Tu nombre"
+                  required
                 />
                 <div class="invalid-feedback">El nombre es obligatorio</div>
               </div>
@@ -343,15 +344,17 @@
                 <label class="form-label">Correo</label>
                 <input
                   type="email"
-                  class="form-control is-valid"
+                  class="form-control"
                   placeholder="correo@email.com"
+                  required
                 />
                 <div class="valid-feedback">Correo válido</div>
               </div>
 
               <div class="mb-3">
                 <label class="form-label">Mensaje</label>
-                <textarea class="form-control" rows="4"></textarea>
+                <textarea class="form-control" rows="4" required></textarea>
+                <div class="invalid-feedback">El mensaje es obligatorio</div>
               </div>
 
               <button class="btn btn-primary w-100">Enviar mensaje</button>
@@ -372,11 +375,30 @@
   -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- 
-    🟩 JS PERSONALIZADO
-    Aquí pondrás funciones tuyas.
-  -->
     <script src="js/script.js"></script>
+
+    <script>
+      (() => {
+        "use strict";
+
+        const forms = document.querySelectorAll(".needs-validation");
+
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 
   <!-- ========================= -->
