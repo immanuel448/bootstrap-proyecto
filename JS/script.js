@@ -10,7 +10,7 @@
   // Convierte la lista de formularios en un array y recorre cada uno
   Array.from(forms).forEach((form) => {
     // Escucha el evento submit (cuando el usuario intenta enviar el formulario)
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", (event) => {º
       event.preventDefault();
 
       if (!form.checkValidity()) {
